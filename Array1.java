@@ -2,28 +2,18 @@ import java.util.Scanner;
 
 public class Array1 {
 
-    public static boolean isFound(int[] arr, int num) {
-        int index=0;
-        while(index< arr.length){
-            if(arr[index]==num){
-                return true;
-            }
-            index++;
-        }
-        return false;
+    public static void main(String[] args) {
+        int [][] array={{1,2,3},{4,5,6},{7,8,9}};
+         int i=0;
+         while(i< array.length){
+             int j=0;
+             while(j<array[i].length){
+                 System.out.print(array[i][j]+" ");
+                 j++;
+             }
+             System.out.println();
+             i++;
+         }
     }
 
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int[] arr={12, 13, 14, 15, 16, 17, 18, 19, 20};
-        System.out.println("Enter the number you want to search");
-        int n= sc.nextInt();
-        boolean isfound= isFound(arr,n);
-        if(isfound){
-            System.out.println("Your number was found in the array");
-        }
-        else{
-            System.out.println("Your number was not found in the array");
-        }
-    }
 }
