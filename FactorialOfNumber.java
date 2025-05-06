@@ -1,25 +1,24 @@
 import java.util.Scanner;
 
-public class FactorialOfNumber {
-
-    public static long factorial(int num) {
-         if(num<2){
-             return 1;
-         }
-        int n=2;
-        long fact=1;
-         while(n<=num){
-            fact=fact*n;
-             n++;
-         }
-         return fact;
+class Fact{
+    public int factorial(int n) {
+        int facto = 1;
+        int i = 1;
+        while (i <= n) {
+            facto = facto * i;
+            i++;
+        }
+        return facto;
     }
+}
 
+public class FactorialOfNumber {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the number ");
-        int n=sc.nextInt();
-        long fact = factorial(n);
-        System.out.println("The factorial of " +n+ " is " +fact);
+        System.out.print("Enter the number ");
+        int n= sc.nextInt();
+        Fact f =new Fact();
+        int a=f.factorial(n);
+        System.out.println("Factorial upto n is " +a);
     }
 }
